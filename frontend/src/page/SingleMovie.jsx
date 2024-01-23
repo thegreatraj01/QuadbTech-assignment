@@ -44,8 +44,8 @@ const SingleMovie = () => {
   return (
     <div className='m-10'>
       {selectedMovie ? (
-        <div className='flex bg-slate-100 gap-5'>
-          <div className='w-1/3'>
+        <div className='flex bg-slate-100 gap-5  flex-wrap md:flex-nowrap lg:flex-nowrap'>
+          <div className='w-full md:w-1/3 '>
             <img
               className='object-contain w-full h-full'
               src={selectedMovie.show.image ? selectedMovie.show.image.original : 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcReMhtSntFv59ZpCW6AorVsvAsreKdqdZmqtknZeR1uOeWR60Yd'}
@@ -85,7 +85,7 @@ const SingleMovie = () => {
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         contentLabel='Review Form Modal'
-        className=" w-[50%] bg-white mx-auto mt-[10vh] "
+        className=" w-[80%] md:w-[60%] lg:w-[50%] bg-white mx-auto mt-[10vh] "
       >
         {/* Form component for review */}
         <ReviewForm closeModal={closeModal} moviename={selectedMovie} />

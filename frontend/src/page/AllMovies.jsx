@@ -22,7 +22,7 @@ const AllMovies = () => {
   return (
     <div>
       <h1 className='font-bold text-2xl text-center my-3'>Welcome To BookMovie.in</h1>
-      <div className='grid grid-cols-5 gap-4 my-8 mx-5'>
+      <div className='grid grid-cols-2 gap-4 my-8 mx-5 md:grid-cols-3 lg:grid-cols-5'>
         {allMovies.map((movie) => (
           <div className='border-2 mx-2 truncate' key={movie.show.id}>
             <Link to={`/movie/${movie.show.id}`}>
